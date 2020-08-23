@@ -10,4 +10,10 @@ gastos = ARGV[2].to_i
 puts "Gasto total $#{gastos}"
 
 utilidades = precio_venta * usuarios - gastos
-puts "Las utilidades sin iva de tu emprendimiento son $#{utilidades}"
+
+if  utilidades <= 0 
+    puts "Las utilidades de tu emprendimiento son $#{utilidades} dólares"
+else 
+    umenosiva = utilidades * 0.75
+    puts "Las utilidades de tu emprendimiento (menos impuestos) son $#{umenosiva} dólares"
+end
